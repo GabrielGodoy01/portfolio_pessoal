@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:portfolio_pessoal/app/modules/home/pages/conhecimentos/widgets/conhecimentos_button_widget.dart';
 import 'package:portfolio_pessoal/app/shared/themes/app_text_styles.dart';
 import 'package:portfolio_pessoal/app/shared/utils/breakpoint.dart';
@@ -13,7 +12,7 @@ class ConhecimentosPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = Modular.get<ConhecimentosController>();
+    var controller = ConhecimentosController();
     final double width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.only(bottom: 60),
