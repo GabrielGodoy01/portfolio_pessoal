@@ -15,6 +15,7 @@ var kotlinCertificado = '$s3UrlCertificados/kotlin.png';
 var metodologiasAgeisCertificado = '$s3UrlCertificados/metodologias_ageis.png';
 var sqlServerCertificado = '$s3UrlCertificados/sql_server.png';
 var vbaCertificado = '$s3UrlCertificados/vba.png';
+var responsividadeFlutterCertificado = '$s3UrlCertificados/responsividade.jpg';
 
 //conhecimentos S3 Bucket
 var s3UrlConhecimentos = '${s3UrlBase}conhecimentos';
@@ -37,3 +38,9 @@ var smileProjetos = '$s3UrlProjetos/smile.png';
 //github e site projetos
 var smileUrl = 'https://smile.maua.br';
 var smileGithubUrl = 'https://github.com/Maua-Dev/smile_front';
+
+//introducao S3 Bucket
+var s3UrlIntroducao = '${s3UrlBase}introducao';
+var mauaIntroducao = '$s3UrlIntroducao/maua.png';
+var devIntroducao = '$s3UrlIntroducao/dev.png';
+var esportsIntroducao = '$s3UrlIntroducao/esports.png';

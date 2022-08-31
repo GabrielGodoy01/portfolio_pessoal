@@ -1,31 +1,42 @@
-// ignore_for_file: constant_identifier_names
+import '../../../../../shared/services/external_urls.dart';
 
 enum IntroductionPhotosEnum {
-  PHOTO1,
-  PHOTO2,
-  PHOTO3,
+  maua,
+  dev,
+  esports,
 }
 
 extension ActivityEnumExtension on IntroductionPhotosEnum {
+  String get title {
+    switch (this) {
+      case IntroductionPhotosEnum.maua:
+        return 'Instituto Mauá de Tecnologia';
+      case IntroductionPhotosEnum.dev:
+        return 'Dev. Community Mauá';
+      case IntroductionPhotosEnum.esports:
+        return 'Mauá E-sports';
+    }
+  }
+
   String get linkPhoto {
     switch (this) {
-      case IntroductionPhotosEnum.PHOTO1:
-        return 'https://pbs.twimg.com/profile_images/1526212670596186113/QoXZEF6E_400x400.jpg';
-      case IntroductionPhotosEnum.PHOTO2:
-        return 'https://pbs.twimg.com/profile_images/1526212670596186113/QoXZEF6E_400x400.jpg';
-      case IntroductionPhotosEnum.PHOTO3:
-        return 'https://pbs.twimg.com/profile_images/1526212670596186113/QoXZEF6E_400x400.jpg';
+      case IntroductionPhotosEnum.maua:
+        return mauaIntroducao;
+      case IntroductionPhotosEnum.dev:
+        return devIntroducao;
+      case IntroductionPhotosEnum.esports:
+        return esportsIntroducao;
     }
   }
 
   String get description {
     switch (this) {
-      case IntroductionPhotosEnum.PHOTO1:
-        return 'Os cursos oferecem conteúdo de alta qualidade, min ';
-      case IntroductionPhotosEnum.PHOTO2:
-        return 'As palestras são gratuitas e contarão com a participação de pro';
-      case IntroductionPhotosEnum.PHOTO3:
-        return 'As palestras de alto impacto serão realizadas por profissionais ';
+      case IntroductionPhotosEnum.maua:
+        return 'Estudante de Engenharia da Computação com previsão de formação em dez/2022.';
+      case IntroductionPhotosEnum.dev:
+        return 'Uma entidade acadêmica do Instituto Mauá de Tecnologia focada em desenvolvimento de software na qual fiz parte como Vice-presidente de Projetos, Tech Leader Front-end, Desenvolvedor Front-end e Mobile e Product Owner de alguns projetos.';
+      case IntroductionPhotosEnum.esports:
+        return 'Membro da entidade acadêmica focada em competições de esportes eletrônicos da qual fui capitão de uma equipe de 5 pessoas, inclusive, jogos são uma paixão e hobby.';
     }
   }
 }

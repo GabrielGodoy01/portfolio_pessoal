@@ -26,9 +26,9 @@ class NextPhotoWidget extends StatelessWidget {
           ),
           child: Padding(
             padding: EdgeInsets.only(
-              bottom: width < breakpointTablet ? 8 : 32,
-              left: width < breakpointTablet ? 8 : 32,
-              right: width < breakpointTablet ? 8 : 32,
+              bottom: width < breakpointTablet ? 24 : 32,
+              left: width < breakpointTablet ? 12 : 32,
+              right: width < breakpointTablet ? 12 : 32,
             ),
             child: Align(
               alignment: Alignment.bottomLeft,
@@ -39,7 +39,7 @@ class NextPhotoWidget extends StatelessWidget {
                     Text(
                       title,
                       style: AppTextStyles.h1.copyWith(
-                          fontSize: width < breakpointMobile ? 20 : 40,
+                          fontSize: width < breakpointMobile ? 20 : 36,
                           color: Colors.white),
                     ),
                     SizedBox(
@@ -49,7 +49,7 @@ class NextPhotoWidget extends StatelessWidget {
                       description,
                       textAlign: TextAlign.justify,
                       style: AppTextStyles.h2.copyWith(
-                          fontSize: width < breakpointTablet ? 14 : 20,
+                          fontSize: width < breakpointTablet ? 14 : 18,
                           color: Colors.white),
                     ),
                   ]),

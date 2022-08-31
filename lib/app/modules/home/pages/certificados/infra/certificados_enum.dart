@@ -2,6 +2,7 @@ import 'package:portfolio_pessoal/app/shared/services/external_urls.dart';
 
 enum CertificadosEnum {
   flutter,
+  responsividadeFlutter,
   metodologiasAgeis,
   java,
   devops,
@@ -36,6 +37,8 @@ extension CertificadosEnumExtension on CertificadosEnum {
         return sqlServerCertificado;
       case CertificadosEnum.vba:
         return vbaCertificado;
+      case CertificadosEnum.responsividadeFlutter:
+        return responsividadeFlutterCertificado;
     }
   }
 
@@ -70,6 +73,8 @@ extension CertificadosEnumExtension on CertificadosEnum {
 
       case CertificadosEnum.vba:
         return 'Finalizado em dezembro de 2020, este curso me garantiu um aprendizado avançado sobre Excel com foco na linguagem de programação VBA para automatização de tabelas, macros, tabelas dinâmicas, procv, proch com carga horária de ';
+      case CertificadosEnum.responsividadeFlutter:
+        return 'Finalizado em junho de 2022, este curso me possibilitou entender melhor os fundamentos da Responsividade com Flutter, diversos widgets novos para design para todas as plataformas que o flutter nos oferece com carga horária de ';
     }
   }
 
@@ -104,6 +109,8 @@ extension CertificadosEnumExtension on CertificadosEnum {
 
       case CertificadosEnum.vba:
         return 'Excel VBA';
+      case CertificadosEnum.responsividadeFlutter:
+        return 'Responsividade Flutter';
     }
   }
 
@@ -129,6 +136,8 @@ extension CertificadosEnumExtension on CertificadosEnum {
         return '80 horas';
       case CertificadosEnum.vba:
         return '80 horas';
+      case CertificadosEnum.responsividadeFlutter:
+        return '6 horas';
     }
   }
 }

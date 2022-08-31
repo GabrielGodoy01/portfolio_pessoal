@@ -16,7 +16,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   var imgList = IntroductionPhotosEnum.values
       .map((IntroductionPhotosEnum value) => NextPhotoWidget(
-          title: value.name,
+          title: value.title,
           description: value.description,
           imageUrl: value.linkPhoto))
       .toList();
