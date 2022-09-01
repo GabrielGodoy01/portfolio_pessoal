@@ -83,8 +83,8 @@ class DialogProjetoWidget extends StatelessWidget {
                         ),
                   projetoUrl == '' || githubUrl == ''
                       ? const SizedBox.shrink()
-                      : const SizedBox(
-                          width: 32,
+                      : SizedBox(
+                          width: width < breakpointMobile ? 8 : 32,
                         ),
                   githubUrl == ''
                       ? const SizedBox.shrink()

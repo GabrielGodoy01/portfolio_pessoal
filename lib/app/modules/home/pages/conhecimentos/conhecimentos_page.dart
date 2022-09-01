@@ -94,7 +94,7 @@ class ConhecimentosPage extends StatelessWidget {
                             fontSize: width < breakpointMobile
                                 ? 16
                                 : width < breakpointTablet
-                                    ? 18
+                                    ? 17
                                     : 20)),
                   );
           }),

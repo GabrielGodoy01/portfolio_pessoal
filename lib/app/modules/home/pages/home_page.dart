@@ -57,87 +57,7 @@ class _HomePageState extends State<HomePage> {
     var width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: const Color(0xffD9D9D9),
-      drawer: width < breakpointTablet
-          ? Drawer(
-              backgroundColor: Colors.black,
-              elevation: 40,
-              child: ListView(
-                controller: ScrollController(),
-                padding: EdgeInsets.zero,
-                children: [
-                  ListTile(
-                    title: Text(
-                      'Conhecimentos',
-                      style: AppTextStyles.h1
-                          .copyWith(color: Colors.white, fontSize: 20),
-                    ),
-                    onTap: () {
-                      Navigator.pop(context);
-                      scrollToConhecimentos();
-                    },
-                  ),
-                  ListTile(
-                    title: Text(
-                      'Projetos',
-                      style: AppTextStyles.h1
-                          .copyWith(color: Colors.white, fontSize: 20),
-                    ),
-                    onTap: () {
-                      Navigator.pop(context);
-                      scrollToProjetos();
-                    },
-                  ),
-                  ListTile(
-                    title: Text(
-                      'Certificados',
-                      style: AppTextStyles.h1
-                          .copyWith(color: Colors.white, fontSize: 20),
-                    ),
-                    onTap: () {
-                      Navigator.pop(context);
-                      scrollToCertificados();
-                    },
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 16),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        InkWell(
-                            onTap: () {
-                              launchUrl(
-                                Uri.parse(githubUrl),
-                                mode: LaunchMode.externalApplication,
-                              );
-                            },
-                            child: const Icon(
-                              FontAwesomeIcons.github,
-                              color: Colors.white,
-                              size: 40,
-                            )),
-                        const SizedBox(
-                          width: 16,
-                        ),
-                        InkWell(
-                            onTap: () {
-                              launchUrl(
-                                Uri.parse(linkedinUrl),
-                                mode: LaunchMode.externalApplication,
-                              );
-                            },
-                            child: const Icon(
-                              FontAwesomeIcons.linkedin,
-                              color: Colors.white,
-                              size: 40,
-                            )),
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            )
-          : null,
-      appBar: width < breakpointTablet
+      appBar: width < breakpointMobile
           ? PreferredSize(
               preferredSize:
                   Size(double.infinity, width < breakpointMobile ? 48 : 60),
@@ -152,10 +72,13 @@ class _HomePageState extends State<HomePage> {
                 elevation: 40,
                 actions: [
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: width < breakpointTablet ? 8 : 16),
                     child: SizedBox(
-                      width: MediaQuery.of(context).size.width / 9,
+                      width: width < breakpointTablet
+                          ? 150
+                          : MediaQuery.of(context).size.width / 8.3,
                       height: MediaQuery.of(context).size.height / 20,
                       child: OutfilledButtonWidget(
                         title: 'Conhecimentos',
@@ -167,10 +90,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: width < breakpointTablet ? 8 : 16),
                     child: SizedBox(
-                      width: MediaQuery.of(context).size.width / 9,
+                      width: width < breakpointTablet
+                          ? 150
+                          : MediaQuery.of(context).size.width / 9,
                       height: MediaQuery.of(context).size.height / 20,
                       child: OutfilledButtonWidget(
                         title: 'Projetos',
@@ -182,10 +108,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 8,
+                        horizontal: width < breakpointTablet ? 8 : 16),
                     child: SizedBox(
-                      width: MediaQuery.of(context).size.width / 9,
+                      width: width < breakpointTablet
+                          ? 150
+                          : MediaQuery.of(context).size.width / 9,
                       height: MediaQuery.of(context).size.height / 20,
                       child: OutfilledButtonWidget(
                         title: 'Certificados',
