@@ -70,25 +70,31 @@ class DialogProjetoWidget extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  OutfilledButtonWidget(
-                    title: 'Visitar Site',
-                    color: Colors.black,
-                    backgroundColor: Colors.white,
-                    onPressed: () {
-                      launchUrl(Uri.parse(projetoUrl));
-                    },
-                  ),
-                  const SizedBox(
-                    width: 32,
-                  ),
-                  OutfilledButtonWidget(
-                    title: 'Github',
-                    color: Colors.black,
-                    backgroundColor: Colors.white,
-                    onPressed: () {
-                      launchUrl(Uri.parse(githubUrl));
-                    },
-                  ),
+                  projetoUrl == ''
+                      ? const SizedBox.shrink()
+                      : OutfilledButtonWidget(
+                          title: 'Visitar Site',
+                          color: Colors.black,
+                          backgroundColor: Colors.white,
+                          onPressed: () {
+                            launchUrl(Uri.parse(projetoUrl));
+                          },
+                        ),
+                  projetoUrl == '' || githubUrl == ''
+                      ? const SizedBox.shrink()
+                      : const SizedBox(
+                          width: 32,
+                        ),
+                  githubUrl == ''
+                      ? const SizedBox.shrink()
+                      : OutfilledButtonWidget(
+                          title: 'Github',
+                          color: Colors.black,
+                          backgroundColor: Colors.white,
+                          onPressed: () {
+                            launchUrl(Uri.parse(githubUrl));
+                          },
+                        ),
                 ],
               )
             ],

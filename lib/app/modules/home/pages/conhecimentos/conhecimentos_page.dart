@@ -57,6 +57,16 @@ class ConhecimentosPage extends StatelessWidget {
             height: 32,
           ),
           Observer(builder: (_) {
+            return Text(
+              controller.list[controller.indexToShow].title,
+              style: AppTextStyles.h1
+                  .copyWith(fontSize: width < breakpointMobile ? 20 : 36),
+            );
+          }),
+          const SizedBox(
+            height: 8,
+          ),
+          Observer(builder: (_) {
             return Flexible(
               child: SizedBox(
                 height: 200,

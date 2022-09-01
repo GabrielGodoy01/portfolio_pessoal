@@ -4,6 +4,7 @@ import 'infra/conhecimentos_enum.dart';
 
 part 'conhecimentos_controller.g.dart';
 
+// ignore: library_private_types_in_public_api
 class ConhecimentosController = _ConhecimentosController
     with _$ConhecimentosController;
 

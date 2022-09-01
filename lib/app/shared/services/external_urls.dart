@@ -30,14 +30,19 @@ var angularConhecimentos = '$s3UrlConhecimentos/angular.png';
 var htmlConhecimentos = '$s3UrlConhecimentos/html.png';
 var metodologiasAgeisConhecimentos = '$s3UrlConhecimentos/metodologia-agil.png';
 var dockerConhecimentos = '$s3UrlConhecimentos/docker.png';
+var awsConhecimentos = '$s3UrlConhecimentos/aws.png';
 
 //projetos S3 Bucket
 var s3UrlProjetos = '${s3UrlBase}projetos';
 var smileProjetos = '$s3UrlProjetos/smile.png';
+var mauappProjetos = '$s3UrlProjetos/mauapp.png';
+var cafeteriaProjetos = '$s3UrlProjetos/cafeteria.png';
 
 //github e site projetos
 var smileUrl = 'https://smile.maua.br';
 var smileGithubUrl = 'https://github.com/Maua-Dev/smile_front';
+var cafeteriaGithubUrl = 'https://github.com/GabrielGodoy01/cafeteria_flutter';
+var mauappGithubUrl = 'https://github.com/Maua-Dev/System_Maua_Front';
 
 //introducao S3 Bucket
 var s3UrlIntroducao = '${s3UrlBase}introducao';
