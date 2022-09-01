@@ -15,7 +15,7 @@ class ConhecimentosPage extends StatelessWidget {
     var controller = ConhecimentosController();
     final double width = MediaQuery.of(context).size.width;
     return Padding(
-      padding: const EdgeInsets.only(bottom: 60),
+      padding: EdgeInsets.only(bottom: width < breakpointMobile ? 16 : 60),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -39,7 +39,7 @@ class ConhecimentosPage extends StatelessWidget {
           Observer(builder: (_) {
             return Wrap(
               alignment: WrapAlignment.center,
-              runSpacing: 16,
+              runSpacing: width < breakpointMobile ? 8 : 16,
               children: [
                 for (var i = 0; i < controller.list.length; i++)
                   ConhecimentosButtonWidget(
@@ -67,15 +67,30 @@ class ConhecimentosPage extends StatelessWidget {
             height: 8,
           ),
           Observer(builder: (_) {
-            return Flexible(
-              child: SizedBox(
-                height: 200,
-                child: Text(controller.list[controller.indexToShow].description,
-                    textAlign: TextAlign.justify,
-                    style: AppTextStyles.h3.copyWith(
-                        fontSize: width < breakpointMobile ? 16 : 20)),
-              ),
-            );
+            return width < breakpointMobile
+                ? Flexible(
+                    child: Text(
+                        controller.list[controller.indexToShow].description,
+                        textAlign: TextAlign.justify,
+                        style: AppTextStyles.h3.copyWith(
+                            fontSize: width < breakpointMobile
+                                ? 16
+                                : width < breakpointTablet
+                                    ? 18
+                                    : 20)),
+                  )
+                : SizedBox(
+                    height: 140,
+                    child: Text(
+                        controller.list[controller.indexToShow].description,
+                        textAlign: TextAlign.justify,
+                        style: AppTextStyles.h3.copyWith(
+                            fontSize: width < breakpointMobile
+                                ? 16
+                                : width < breakpointTablet
+                                    ? 18
+                                    : 20)),
+                  );
           }),
         ],
       ),

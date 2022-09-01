@@ -227,11 +227,13 @@ class _HomePageState extends State<HomePage> {
                 child: const MainPage(),
               ),
               const Divider(color: Colors.black, thickness: 3),
-              SizedBox(
-                key: conhecimentosKey,
-                height: MediaQuery.of(context).size.height - 60,
-                child: const ConhecimentosPage(),
-              ),
+              width < breakpointMobile
+                  ? ConhecimentosPage()
+                  : SizedBox(
+                      key: conhecimentosKey,
+                      height: MediaQuery.of(context).size.height - 60,
+                      child: const ConhecimentosPage(),
+                    ),
               const Divider(color: Colors.black, thickness: 3),
               SizedBox(
                 key: projetosKey,

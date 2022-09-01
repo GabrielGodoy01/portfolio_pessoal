@@ -59,7 +59,7 @@ class _MainPageState extends State<MainPage> {
                   children: [
                     ConstrainedBox(
                       constraints: BoxConstraints(
-                          maxWidth: 800, maxHeight: height / 1.9),
+                          maxWidth: 800, maxHeight: height / 2.5),
                       child: Container(
                         decoration: BoxDecoration(
                           border: Border.all(width: 2),

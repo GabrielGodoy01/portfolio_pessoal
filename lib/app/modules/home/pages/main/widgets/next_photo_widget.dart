@@ -26,7 +26,7 @@ class NextPhotoWidget extends StatelessWidget {
           ),
           child: Padding(
             padding: EdgeInsets.only(
-              bottom: width < breakpointTablet ? 24 : 32,
+              bottom: width < breakpointTablet ? 12 : 32,
               left: width < breakpointTablet ? 12 : 32,
               right: width < breakpointTablet ? 12 : 32,
             ),
