@@ -63,7 +63,7 @@ class CardProjetoDesktopWidget extends StatelessWidget {
                               ));
                     },
                     style: TextButton.styleFrom(
-                      primary: Colors.black,
+                      foregroundColor: Colors.black,
                     ),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,

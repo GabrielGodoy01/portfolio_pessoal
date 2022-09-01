@@ -41,6 +41,8 @@ var cafeteriaProjetos = '$s3UrlProjetos/cafeteria.png';
 //github e site projetos
 var smileUrl = 'https://smile.maua.br';
 var smileGithubUrl = 'https://github.com/Maua-Dev/smile_front';
+var cafeteriaUrl =
+    'http://coffeeshopflutter.s3-website-us-east-1.amazonaws.com/';
 var cafeteriaGithubUrl = 'https://github.com/GabrielGodoy01/cafeteria_flutter';
 var mauappGithubUrl = 'https://github.com/Maua-Dev/System_Maua_Front';
 

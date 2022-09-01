@@ -23,8 +23,12 @@ class ConhecimentosPage extends StatelessWidget {
         children: [
           Text(
             'Conhecimentos',
-            style: AppTextStyles.h1
-                .copyWith(fontSize: width < breakpointMobile ? 40 : 60),
+            style: AppTextStyles.h1.copyWith(
+                fontSize: width < 328
+                    ? 32
+                    : width < breakpointMobile
+                        ? 40
+                        : 60),
           ),
           const SizedBox(
             height: 24,
@@ -70,14 +74,16 @@ class ConhecimentosPage extends StatelessWidget {
             return width < breakpointMobile
                 ? Flexible(
                     child: Text(
-                        controller.list[controller.indexToShow].description,
-                        textAlign: TextAlign.justify,
-                        style: AppTextStyles.h3.copyWith(
-                            fontSize: width < breakpointMobile
-                                ? 16
-                                : width < breakpointTablet
-                                    ? 18
-                                    : 20)),
+                      controller.list[controller.indexToShow].description,
+                      textAlign: TextAlign.justify,
+                      style: AppTextStyles.h3.copyWith(
+                        fontSize: width < breakpointMobile
+                            ? 16
+                            : width < breakpointTablet
+                                ? 18
+                                : 20,
+                      ),
+                    ),
                   )
                 : SizedBox(
                     height: 140,

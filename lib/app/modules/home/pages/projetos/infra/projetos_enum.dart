@@ -43,7 +43,7 @@ extension ProjetosEnumExtension on ProjetosEnum {
       case ProjetosEnum.mauapp:
         return '';
       case ProjetosEnum.cafeteria:
-        return '';
+        return cafeteriaUrl;
     }
   }
 

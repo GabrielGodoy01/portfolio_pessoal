@@ -41,7 +41,7 @@ class CardProjetoMobileWidget extends StatelessWidget {
           ),
           Container(
             width: width < breakpointMobile ? width / 1.2 : width / 2,
-            height: height / 21,
+            height: height / 20,
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: const BoxDecoration(color: Colors.white),
             child: Row(
@@ -64,21 +64,11 @@ class CardProjetoMobileWidget extends StatelessWidget {
                             ));
                   },
                   style: TextButton.styleFrom(
-                    primary: Colors.black,
+                    foregroundColor: Colors.black,
                   ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: const [
-                      Text(
-                        'Ler Mais',
-                        style: AppTextStyles.h3,
-                      ),
-                      Icon(
-                        Icons.arrow_forward_ios,
-                        size: 12,
-                      )
-                    ],
+                  child: const Text(
+                    'Ler Mais >',
+                    style: AppTextStyles.h3,
                   ),
                 )
               ],

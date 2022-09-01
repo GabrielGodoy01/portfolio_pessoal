@@ -35,14 +35,14 @@ class _MainPageState extends State<MainPage> {
                 Column(
                   children: [
                     const SizedBox(
-                      height: 24,
+                      height: 16,
                     ),
                     Text(
                       'Olá, eu sou o Gabriel e você está em meu portfólio!',
                       style: AppTextStyles.h1.copyWith(fontSize: 34),
                     ),
                     const SizedBox(
-                      height: 24,
+                      height: 12,
                     ),
                     Text(
                       'A seguir, você verá todos meus projetos, conhecimentos e hobbies, mas por enquanto aqui está uma breve introdução:',

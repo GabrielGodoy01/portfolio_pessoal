@@ -29,7 +29,7 @@ class DialogProjetoWidget extends StatelessWidget {
       ),
       elevation: 40,
       child: Padding(
-        padding: const EdgeInsets.all(32),
+        padding: EdgeInsets.all(width < breakpointMobile ? 16 : 32),
         child: SizedBox(
           width: MediaQuery.of(context).size.width / 2,
           child: Column(
@@ -61,11 +61,12 @@ class DialogProjetoWidget extends StatelessWidget {
                             : width < breakpointTablet
                                 ? 16
                                 : 18),
+                    textAlign: TextAlign.justify,
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 64,
+              SizedBox(
+                height: width < breakpointMobile ? 24 : 64,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

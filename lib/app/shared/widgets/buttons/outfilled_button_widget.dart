@@ -18,23 +18,19 @@ class OutfilledButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width / 9,
-      height: MediaQuery.of(context).size.height / 20,
-      child: ElevatedButton(
-          onPressed: onPressed,
-          style: ElevatedButton.styleFrom(
-              onPrimary: onPrimary ?? Colors.grey.shade900,
-              primary: backgroundColor ?? Colors.transparent,
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(5),
-                  side: BorderSide(color: color ?? Colors.white, width: 3))),
-          child: Text(
-            title,
-            style: AppTextStyles.h1
-                .copyWith(color: color ?? Colors.white, fontSize: 16),
-            textAlign: TextAlign.center,
-          )),
-    );
+    return ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+            foregroundColor: onPrimary ?? Colors.grey.shade900,
+            backgroundColor: backgroundColor ?? Colors.transparent,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(5),
+                side: BorderSide(color: color ?? Colors.white, width: 3))),
+        child: Text(
+          title,
+          style: AppTextStyles.h1
+              .copyWith(color: color ?? Colors.white, fontSize: 16),
+          textAlign: TextAlign.center,
+        ));
   }
 }

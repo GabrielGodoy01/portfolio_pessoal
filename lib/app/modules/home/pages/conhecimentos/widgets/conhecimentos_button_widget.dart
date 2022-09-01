@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_pessoal/app/shared/utils/breakpoint.dart';
 
 class ConhecimentosButtonWidget extends StatelessWidget {
   final int indexToShow;
@@ -15,12 +16,20 @@ class ConhecimentosButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
     return ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-            shape: const CircleBorder(),
-            padding: EdgeInsets.all(myIndex == indexToShow ? 36 : 28),
-            primary: Colors.white),
-        child: Image.network(icon));
+          shape: const CircleBorder(),
+          backgroundColor: Colors.white,
+          padding: width < breakpointMobile
+              ? EdgeInsets.all(myIndex == indexToShow ? 28 : 20)
+              : EdgeInsets.all(myIndex == indexToShow ? 36 : 28),
+        ),
+        child: Image.network(
+          icon,
+          height: width < breakpointMobile ? 50 : null,
+          width: width < breakpointMobile ? 50 : null,
+        ));
   }
 }

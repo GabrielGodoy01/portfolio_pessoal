@@ -154,34 +154,46 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                    child: OutfilledButtonWidget(
-                      title: 'Conhecimentos',
-                      onPrimary: Colors.white,
-                      onPressed: () {
-                        scrollToConhecimentos();
-                      },
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width / 9,
+                      height: MediaQuery.of(context).size.height / 20,
+                      child: OutfilledButtonWidget(
+                        title: 'Conhecimentos',
+                        onPrimary: Colors.white,
+                        onPressed: () {
+                          scrollToConhecimentos();
+                        },
+                      ),
                     ),
                   ),
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                    child: OutfilledButtonWidget(
-                      title: 'Projetos',
-                      onPrimary: Colors.white,
-                      onPressed: () {
-                        scrollToProjetos();
-                      },
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width / 9,
+                      height: MediaQuery.of(context).size.height / 20,
+                      child: OutfilledButtonWidget(
+                        title: 'Projetos',
+                        onPrimary: Colors.white,
+                        onPressed: () {
+                          scrollToProjetos();
+                        },
+                      ),
                     ),
                   ),
                   Padding(
                     padding:
                         const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-                    child: OutfilledButtonWidget(
-                      title: 'Certificados',
-                      onPrimary: Colors.white,
-                      onPressed: () {
-                        scrollToCertificados();
-                      },
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width / 9,
+                      height: MediaQuery.of(context).size.height / 20,
+                      child: OutfilledButtonWidget(
+                        title: 'Certificados',
+                        onPrimary: Colors.white,
+                        onPressed: () {
+                          scrollToCertificados();
+                        },
+                      ),
                     ),
                   ),
                   Padding(
